@@ -26,4 +26,4 @@ In terms of actual suggestions to the website:
 
 In conclusion, be super creative. Make this website bold and super unique. Change whatever you think needs to be changed! Good luck!
 
-- Gandhar (creator of the very disorganized Hack Club Wheaton website)
+-- Gandhar (creator of the very disorganized Hack Club Wheaton website)
