@@ -1,0 +1,625 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hack Club Wheaton</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+<link rel="shortcut icon" href="https://www.ffwd.org/wp-content/uploads/12391785_1077834235600931_1299484106104597636_n.png" />
+    <script src="https://unpkg.com/wavesurfer.js@3.0.0/dist/wavesurfer.min.js"></script>
+
+  <style>
+      #grad {
+      height: auto;
+      background-color: red; 
+      background-image: linear-gradient(to bottom right, red, yellow); 
+    background-size:  cover;                   
+    background-repeat:   no-repeat;
+    background-position: center center;   
+      }
+
+html { 
+}
+      .container {
+        width: 95%;
+        margin: auto;
+      }
+      .menu-hover-lines {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all 0.35s ease;
+  font-size: 200px;
+}
+
+.menu-hover-lines li a {
+  padding: 0.75rem 0;
+  color: rgba(10, 10, 10, 0.5);
+  position: relative;
+}
+
+.menu-hover-lines li:first-child a {
+}
+
+.menu-hover-lines li.active > a {
+  background-color: transparent;
+}
+
+.menu-hover-lines a:before,
+.menu-hover-lines a::after {
+
+
+  content: '';
+  transition: all 0.35s ease;
+  background-color: black; /*change this value for navigation color*/
+  width: 0;
+}
+
+.menu-hover-lines a::before {
+  top: 0;
+}
+
+.menu-hover-lines a::after {
+  bottom: 0;
+  right: 0;
+}
+
+.menu-hover-lines a:hover,
+.menu-hover-lines li.active > a {
+  color: black; /*change this to change font color*/
+  transition: all 0.35s ease;
+     -webkit-text-stroke: 1px black;
+
+}
+
+.menu-hover-lines a:hover::before,
+.menu-hover-lines .active a::before,
+.menu-hover-lines a:hover::after,
+.menu-hover-lines .active a::after {
+  width: 100%;
+}
+
+.element::-webkit-scrollbar { width: 0 !important }
+
+
+
+.image1 {
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+.button-rounded-hover {
+  background:rgba(255,255,255,0.2);
+  border: 0;
+  border-radius: 5000px;
+  padding: 12px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  transition: all 0.35s ease;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
+.button-rounded-hover:before {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border-radius: inherit;
+  background-color: #fefefe;
+  transition: all 0.3s;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.button-rounded-hover:after {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border: 3px solid antiquewhite;
+  content: '';
+  border-radius: inherit;
+}
+
+.button-rounded-hover:hover,
+.button-rounded-hover:focus {
+  background:rgba(255,255,255,0.4);
+}
+
+.button-rounded-hover:hover:before,
+.button-rounded-hover:focus:before {
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
+  opacity: 0.25;
+}
+
+
+
+
+
+
+.collapsible {
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: transparent;
+}
+
+.content {
+  padding: 0 5px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: transparent;
+  border: ;
+  width: 90%;
+  margin: auto;
+}
+
+
+
+
+
+
+
+
+
+.ghost {
+  animation: float 3s ease-out infinite;
+  margin-top: -30px;
+}
+
+@keyframes float {
+  50% {
+     transform: translate(0, 20px);
+  }
+}
+
+/* .shadowFrame {
+  width: 130px;
+  margin-top: 15px;
+}
+.shadow {
+  animation: shrink 3s ease-out infinite;
+  transform-origin: center center;
+  ellipse {
+    transform-origin: center center;
+  }
+} */
+
+@keyframes shrink {
+  0% {
+    width: 90%;
+    margin: 0 5%;
+  }
+  50% {
+    width: 60%;
+    margin: 0 18%;
+  }
+  100% {
+    width: 90%;
+    margin: 0 5%;
+  }
+}
+
+
+
+
+
+
+
+
+
+.background {
+
+
+  background-color: ;
+}
+
+
+
+/* misc */
+* { margin: 0; padding: 0; }
+.background {
+  min-height: 100vh;
+  display: flex;
+}
+.text {
+  margin: auto;
+  background: rgba(0,0,0,1);
+  padding: 1em;
+}
+
+
+
+
+
+
+@media screen and (max-width: 900px){   
+    #slideshow{      
+        width: 100%;
+        margin: center;
+        margin-bottom: 20px;
+    } 
+}
+
+@media screen and (min-width: 900px) {      
+    #slideshow{      
+       width: 60%;
+       float: left;
+     } 
+} 
+
+  </style>
+  </head>
+
+
+
+
+
+
+
+
+  <body class="background">
+
+<div id="grad">
+<br>
+
+<div class="container" style="width: 95%; padding-left: 5%; padding-right: 5%;">
+    <div style="">
+    <ul class="menu menu-hover-lines" style="">
+      <a><center>
+          <h1><div class="word" style="font-size: 180%; font-weight: 600; color: white;">
+          Welcome to Hack Club!
+          </div></h1>
+      </center></a>
+    </ul>
+  </div>
+</div>
+
+<div style="width: 90%; margin: auto; margin-top: -20px;">
+
+
+<center>
+
+<br>
+
+<div class="container" style="">
+<svg class="ghost" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="20%" height="132.743px" viewBox="0 0 127.433 132.743" 
+   xml:space="preserve">
+<path fill="#FFF6F4" d="M116.223,125.064c1.032-1.183,1.323-2.73,1.391-3.747V54.76c0,0-4.625-34.875-36.125-44.375
+  s-66,6.625-72.125,44l-0.781,63.219c0.062,4.197,1.105,6.177,1.808,7.006c1.94,1.811,5.408,3.465,10.099-0.6
+  c7.5-6.5,8.375-10,12.75-6.875s5.875,9.75,13.625,9.25s12.75-9,13.75-9.625s4.375-1.875,7,1.25s5.375,8.25,12.875,7.875
+  s12.625-8.375,12.625-8.375s2.25-3.875,7.25,0.375s7.625,9.75,14.375,8.125C114.739,126.01,115.412,125.902,116.223,125.064z"/>
+<circle fill="#013E51" cx="86.238" cy="57.885" r="6.667"/>
+<circle fill="#013E51" cx="40.072" cy="57.885" r="6.667"/>
+<path fill="#013E51" d="M71.916,62.782c0.05-1.108-0.809-2.046-1.917-2.095c-0.673-0.03-1.28,0.279-1.667,0.771
+  c-0.758,0.766-2.483,2.235-4.696,2.358c-1.696,0.094-3.438-0.625-5.191-2.137c-0.003-0.003-0.007-0.006-0.011-0.009l0.002,0.005
+  c-0.332-0.294-0.757-0.488-1.235-0.509c-1.108-0.049-2.046,0.809-2.095,1.917c-0.032,0.724,0.327,1.37,0.887,1.749
+  c-0.001,0-0.002-0.001-0.003-0.001c2.221,1.871,4.536,2.88,6.912,2.986c0.333,0.014,0.67,0.012,1.007-0.01
+  c3.163-0.191,5.572-1.942,6.888-3.166l0.452-0.453c0.021-0.019,0.04-0.041,0.06-0.061l0.034-0.034
+  c-0.007,0.007-0.015,0.014-0.021,0.02C71.666,63.771,71.892,63.307,71.916,62.782z"/>
+<circle fill="#FCEFED" stroke="#FEEBE6" stroke-miterlimit="10" cx="18.614" cy="99.426" r="3.292"/>
+<circle fill="#FCEFED" stroke="#FEEBE6" stroke-miterlimit="10" cx="95.364" cy="28.676" r="3.291"/>
+<circle fill="#FCEFED" stroke="#FEEBE6" stroke-miterlimit="10" cx="24.739" cy="93.551" r="2.667"/>
+<circle fill="#FCEFED" stroke="#FEEBE6" stroke-miterlimit="10" cx="101.489" cy="33.051" r="2.666"/>
+<circle fill="#FCEFED" stroke="#FEEBE6" stroke-miterlimit="10" cx="18.738" cy="87.717" r="2.833"/>
+
+</svg>
+
+</div>
+
+
+
+</center>
+
+
+
+</div>
+
+
+
+
+
+
+<!-- use button tag for on page actions -->
+<hr style="width: 90%;">
+
+<div class="leftside" style="width: 90%; margin-left: 5%;">
+
+<button class="collapsible">
+<div class="container">
+<div style="">
+<ul class="menu menu-hover-lines">
+<li><a>
+<h1><div class="word" style="font-size: 100%; font-weight: 600; ">
+About Hack Club
+</div></h1>
+</a></li>
+</ul>
+  </div>
+</div>
+</button>
+<div class="content">
+  <p>
+    <h3>
+      <div id="slideshow" style="padding-right: 20px; margin-top: 10px; text-shadow: 2px 2px 2px black;">
+<img class="mySlides w3-animate-top" src="30.jpg" style="width:100%; border-radius: 25px;">
+<img class="mySlides w3-animate-bottom" src="31.jpg" style="width:100%; border-radius: 25px;">
+<img class="mySlides w3-animate-top" src="32.jpg" style="width:100%; border-radius: 25px;">
+<img class="mySlides w3-animate-top" src="33.jpg" style="width:100%; border-radius: 25px;">
+<img class="mySlides w3-animate-top" src="34.jpg" style="width:100%; border-radius: 25px;">
+<img class="mySlides w3-animate-top" src="35.jpg" style="width:100%; border-radius: 25px;">
+<img class="mySlides w3-animate-top" src="36.jpg" style="width:100%; border-radius: 25px;">
+<img class="mySlides w3-animate-top" src="37.jpg" style="width:100%; border-radius: 25px;">
+<img class="mySlides w3-animate-top" src="38.jpg" style="width:100%; border-radius: 25px;">
+
+</div>
+<span style="color: white;">
+<strong>
+  Wheaton Hack Club is our local chapter sponsored by the original group based in California. Hack Club is a global network designed for programming clubs like us. Hack Club is student run. In other words: NO lectures! Hack Club is intended to be a supportive community for all members! Throughout the year, we will be completing awesome projects, learning programming languages, advancing previously acquired skills, and competing at hackathons. There is more to Hack Club then just our club meetings. No prior experience is neccessary! There is always something new to learn!
+</strong>
+<br>
+<br>
+<strong>
+Follow us on Instagram!
+<br>
+<a class="button button-rounded-hover" target="blank" style="width: auto; font-size: 75%;" href="https://www.instagram.com/hackclubwheaton/">@hackclubwheaton</a>
+<br>
+<br>
+Check out the main Hack Club website!
+<br>
+<a class="button button-rounded-hover" target="blank" style="width: auto; font-size: 75%;" href="https://hackclub.com/">Main Hack Club Website</a>
+
+</h3>
+  </p>
+  <hr>
+</div>
+
+
+
+<button class="collapsible">
+<div class="container">
+<div style="">
+<ul class="menu menu-hover-lines">
+<li><a>
+<h1><div class="word" style="font-size: 100%; font-weight: 600; ">
+Join Discord
+</div></h1>
+</a></li>
+</ul>
+</div>
+</div>
+</button>
+<div class="content">
+  <p><h3>
+    <span  style="color: white;"><strong>
+      Our discord is a great way to contact club leaders, talk with other members, and stay connected about future event and meeting dates!
+    </strong>
+  </span>
+<br>
+
+<strong> 
+<br>
+<a class="button button-rounded-hover" style="width: auto; font-size: 75%;" target="blank" href="https://discord.gg/68dTArJ">Go To Hack Club Discord</a>
+ <hr>
+ </h3>
+  </p>
+</div>
+
+
+<button class="collapsible">
+<div class="container">
+<div style="">
+<ul class="menu menu-hover-lines">
+<li><a>
+<h1><div class="word" style="font-size: 100%; font-weight: 600; ">
+Meetings
+</div></h1>
+</a></li>
+</ul>
+</div>
+</div>
+</button>
+<div class="content">
+  <p>
+<h3>
+<!-- Out first meeting is Friday, September 13th! It is after school in room 3711. We'll provide food and drinks as you learn what Hack Club is all about. Collect some tuff stickers! Bring your laptop if you have one because we will be doing an awesome activity!!! (If you don't have one, no worries, we will have extra laptops.) -->
+
+<div style="color: white;"><center><h2><strong>
+We meet on Fridays after school in Room 3711!
+</strong></h2></center></div>
+
+<hr>
+
+</h3>
+  </p>
+</div>
+
+
+
+<button class="collapsible">
+<div class="container">
+<div style="">
+<ul class="menu menu-hover-lines">
+<li><a>
+<h1><div class="word" style="font-size: 100%; font-weight: 600; ">
+Our Leaders
+</div></h1>
+</a></li>
+</ul>
+</div>
+</div>
+</button>
+<div class="content" style="color: white;">
+  <p>
+    <h3>
+<strong>
+President: <i>Gandhar V.</i>
+<br>
+Vice President: <i>Tsegazeab </i>
+<br>
+Communications: <i>Anthony H.</i>
+<br>
+Treasury: <i>Simon N. </i>
+<br>
+Head of Programming: <i>Yeabsira M. </i>
+<br>
+<br>
+Teacher Sponsor: <i>Mrs. Dunbar (Rm. 3711)</i>
+<hr>
+</strong>
+</h3>
+  </p>
+</div>
+
+
+
+
+
+
+<button class="collapsible">
+<div class="container">
+<div style="">
+<ul class="menu menu-hover-lines">
+<li><a>
+<h1><div class="word" style="font-size: 100%; font-weight: 600; ">
+Contact info 
+</div></h1>
+</a></li>
+</ul>
+</div>
+</div>
+</button>
+<div class="content">
+  <p>
+    <h3>
+      <strong>
+<span style="color: white;"><strong>Gandhar:</strong> 
+<br>
+- Email- gandhar.viragi@gmail.com
+</span>
+<br>
+<a class="button button-rounded-hover" style="width: auto; font-size: 75%; height: auto;" target="blank" href="https://www.instagram.com/gunny.jaunt/">@gunny.jaunt</a>
+<br>
+<br>
+<span style="color: white;"><strong>Anthony:</strong> 
+<br>
+- Email- anthony.b.huynh@gmail.com 
+</span>
+<br>
+<a class="button button-rounded-hover" style="width: auto; font-size: 75%; height: auto;" target="blank" href="https://www.instagram.com/antwon._07/">@antwon._07</a>
+<br>
+<br>
+<span style="color: white;"><strong>Simon:</strong> 
+<br>
+- Email- simonhknguyen@gmail.com
+</span>
+<br>
+<a class="button button-rounded-hover" style="width: auto; font-size: 75%; height: auto;" target="blank" href="https://www.instagram.com/simysimon/">@simysimon</a>
+<br>
+<br>
+<span style="color: white;"><strong>Tsegazeab:</strong> 
+<br>
+- Email- tsegazeab12@gmail.com
+</span>
+<br>
+<a class="button button-rounded-hover" style="width: auto; font-size: 75%; height: auto;" target="blank" href="https://www.instagram.com/tsegaz.on.ig/">@tsegaz.on.ig</a>
+<br>
+<br>
+<span style="color: white;"><strong>Yeabsira:</strong>
+<br>
+- Email- yeabsira.r.moges@gmail.com 
+</span>
+<br>
+<a class="button button-rounded-hover" style="width: auto; font-size: 75%; height: auto;" target="blank" href="https://www.instagram.com/yeab.mxj/">@yeab.mxj</a>
+<hr>
+</strong>
+    </h3>
+  </p>
+</div>
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</div>
+
+
+</div>
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+
+</script>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 4000);
+}
+</script>
+
+
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
